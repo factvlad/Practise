@@ -1,39 +1,39 @@
 // 1
-let person = {
-  id: 1,
-  name: "Nicholas",
-  getInfo() {
-    let personID = () => {
-      console.log(this.id, this.name);
-    };
-    personID();
+// let person = {
+//   id: 1,
+//   name: "Nicholas",
+//   getInfo() {
+//     let personID = () => {
+//       console.log(this.id, this.name);
+//     };
+//     personID();
 
-    let upperName = function (x, y) {
-      console.log(this.name?.toUpperCase()); // this.name && this.name.toUpperCase() - ?
-      console.log(x, y);
-    };
-    const arr = [1, 2];
+//     let upperName = function (x, y) {
+//       console.log(this.name?.toUpperCase()); // this.name && this.name.toUpperCase() - ?
+//       console.log(x, y);
+//     };
+//     const arr = [1, 2];
 
-    upperName.apply(this, arr);
-    upperName.call(this, ...arr);
+//     upperName.apply(this, arr);
+//     upperName.call(this, ...arr);
 
-    return `id: ${this.id}, name: ${this.name}`;
-  },
-};
+//     return `id: ${this.id}, name: ${this.name}`;
+//   },
+// };
 
-console.log(person.getInfo());
+// console.log(person.getInfo());
 
-function someS() {
-  console.log(this);
-}
-someS();
+// function someS() {
+//   console.log(this);
+// }
+// someS();
 
-console.log(this);
+// console.log(this);
 
-let person2 = {
-  id: 12,
-  name: "Jack",
-};
+// let person2 = {
+//   id: 12,
+//   name: "Jack",
+// };
 
 // function sume(...args) {
 //   console.log(args.reduce((a, b) => a + b));
@@ -49,14 +49,41 @@ let person2 = {
 //   this.name = name; // {name:}
 // }
 
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// let person = new Person("Nicholas");
+// let notAPerson = Person("Nicholas");
+
+(function () {
+  let count = 2
+  let i = count * 2 * 2
+  return i + count
 }
+)()
 
-let person = new Person("Nicholas");
-let notAPerson = Person("Nicholas");
+function test() {
+  let count = 2
+  let i = count * 2 * 2
+  return i + count
+}
+console.log(test())
 
-console.log(person);
-console.log(notAPerson);
+
+const test10 = function () {
+  gg = 110
+  return gg + 12
+}
+console.log(test10())
+
+
+
+
+const test22 = (ggg = 10) => ggg + 11
+console.log(test22())
+
+
+
