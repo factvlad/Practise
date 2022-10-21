@@ -58,32 +58,279 @@
 // let person = new Person("Nicholas");
 // let notAPerson = Person("Nicholas");
 
-(function () {
-  let count = 2
-  let i = count * 2 * 2
-  return i + count
-}
-)()
+// (function () {
+//   let count = 2
+//   let i = count * 2 * 2
+//   return i + count
+// }
+// )()
 
-function test() {
-  let count = 2
-  let i = count * 2 * 2
-  return i + count
-}
-console.log(test())
-
-
-const test10 = function () {
-  gg = 110
-  return gg + 12
-}
-console.log(test10())
+// function test() {
+//   let count = 2
+//   let i = count * 2 * 2
+//   return i + count
+// }
+// console.log(test())
 
 
-
-
-const test22 = (ggg = 10) => ggg + 11
-console.log(test22())
+// const test10 = function () {
+//   gg = 110
+//   return gg + 12
+// }
+// console.log(test10())
 
 
 
+
+// const test22 = (ggg = 10) => ggg + 11
+// console.log(test22())
+
+
+// const Cities = {
+//   Odessa: 2,
+//   Kiev: 10,
+//   Kharkov: 3,
+//   BigVillge: {
+//     Hg: 100,
+//     Gf: 50,
+//     Kf: 1,
+//   },
+//   Sum: function () {
+//     console.log("zalupa")
+//   }
+// }
+// const info = [{ ...Cities, ...Array1 }]
+// console.log(info)
+
+// const newarr = info.map((item, index) => (item))
+// console.log(newarr.concat(Array1))
+
+
+
+
+// const ask = (question, yes, no) => {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Вы согласны?",
+//   () => { alert("Вы согласились.") },
+//   () => { alert("Вы отменили выполнение.") }
+// );
+
+// const user = {
+//   name: 'Bob',
+//   funcFunc() {
+//     return function() {
+//       console.log(this);
+//     }
+//   },
+//   funcArrow() {
+//     return () => {
+//       console.log(this);
+//     }
+//   },
+//   arrowFunc: () => {
+//     return function() {
+//       console.log(this);
+//     }
+//   },
+//   arrowArrow: () => {
+//     return () => {
+//       console.log(this);
+//     }
+//   },
+// };
+
+// user.funcFunc()(); // ?
+// user.funcArrow()(); // ?
+// user.arrowFunc()(); // ?
+// user.arrowArrow()(); // ?
+
+
+// Объект user остался без изменений
+// const user = {
+//   name: 'Bob',
+//   funcFunc() {
+//     return function() {
+//       console.log(this);
+//     }
+//   },
+//   funcArrow() {
+//     return () => {
+//       console.log(this);
+//     }
+//   },
+//   arrowFunc: () => {
+//     return function() {
+//       console.log(this);
+//     }
+//   },
+//   arrowArrow: () => {
+//     return () => {
+//       console.log(this);
+//     }
+//   },
+// };
+
+// const user2 = {
+//   name: 'Jim',
+//   funcFunc: user.funcFunc(),
+//   funcArrow: user.funcArrow(),
+//   arrowFunc: user.arrowFunc(),
+//   arrowArrow: user.arrowArrow()
+// }
+
+// user2.funcFunc(); // ?
+// user2.funcArrow(); // ?
+// user2.arrowFunc(); // ?
+// user2.arrowArrow(); // ?
+
+// function t12(e) {
+//     const button = document.querySelector(".btn")
+//     const { textContent } = this
+//     console.log(this)
+// }
+
+
+// document.querySelector(".btn").onclick = t12;
+
+
+
+
+
+// function getSubscriptionPrice(type) {
+//     let price;
+
+
+//     switch (type) {
+//         case "starter":
+//             price = 0
+//             break;
+
+//         case "professional":
+//             price = 20
+//             break;
+
+//         case "organization":
+//             price = 50
+//             break;
+//     }
+
+//     // Change code above this line
+//     return price;
+// }
+
+// function getShippingCost(country) {
+//     let message;
+//     let price;
+//     switch (country) {
+//         case "China":
+//             price = 100
+//             message = `Shipping to ${country} will cost ${price} credits`
+//             break;
+//         case "Chile":
+//             price = 250
+//             message = `Shipping to ${country} will cost ${price} credits`
+//             break;
+//         case "Australia":
+//             price = 170
+//             message = `Shipping to ${country} will cost ${price} credits`
+//             break;
+//         case "Jamaica":
+//             price = 120
+//             message = `Shipping to ${country} will cost ${price} credits`
+//             break;
+//         default:
+//             message = "Sorry, there is no delivery to your country"
+//     }
+//     return message;
+// }
+
+// console.log(getShippingCost("Australia"))
+
+// const courseTopic = "JavaScript essentials";
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// console.log(courseTopic.length + 1)
+// const lastElement = courseTopic[courseTopic.length - 1]
+// console.log(lastElement)
+
+
+// const atTheOldToad = {
+//     potions: [
+//         { name: "Speed potion", price: 460 },
+//         { name: "Dragon breath", price: 780 },
+//         { name: "Stone skin", price: 520 },
+//     ],
+//     getPotions() {
+//         return this.potions;
+//     },
+
+//     addPotion(newPotion) {
+//         for (const item of this.potions) {
+
+//             if (item.name === newPotion.name) {
+//                 return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//             }
+//         }
+//         const newProduct = {
+//             ...newPotion,
+//         };
+
+
+
+//         this.potions.push(newPotion);
+//     },
+//     removePotion(potionName) {
+//         for (let i = 0; i < this.potions.length; i += 1) {
+//             const potion = this.potions[i];
+//             if (potionName === potion.name) {
+//                 this.potions.splice(i, 1);
+//             }
+//         }
+//     },
+//     updatePotionName(oldName, newName) {
+//         let resalt = `Potion ${oldName} is not in inventory`;
+//         for (let i = 0; i < this.potions.length; i += 1) {
+//             const potion = this.potions[i];
+
+//             if (oldName === potion.name) {
+//                 potion.name = newName;
+//                 resalt = `Found ${oldName} change to ${newName} `;
+//             }
+//         }
+//         return console.log(resalt);
+//     },
+// };
+
+
+
+// const planetsLengths = planets.map((element) => {
+//     return element.length
+// })
+
+// const titles = books.map(element => element.title)
+
+
+// Change code below this line
+
+
+const students = [
+    { name: "Манго", score: 83 },
+    { name: "Поли", score: 59 },
+    { name: "Аякс", score: 37 },
+    { name: "Киви", score: 94 },
+    { name: "Хьюстон", score: 64 },
+  ];
+  
+  // Название аккумулятора может быть произвольным, это просто параметр функции
+  const totalScore = students.reduce((total, student) => {
+    return total + student.score;
+  }, 0);
+  
+//   const averageScore = totalScore / students.length;
+
+console.log(totalScore)
